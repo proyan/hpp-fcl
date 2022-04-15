@@ -85,6 +85,7 @@ class HPP_FCL_DLLAPI BVHModelBase : public CollisionGeometry {
 
   /// @brief Model type described by the instance
   BVHModelType getModelType() const {
+    std::cerr<<"num_tris "<<num_tris<<"num_vertices"<<num_vertices<<std::endl;
     if (num_tris && num_vertices)
       return BVH_MODEL_TRIANGLES;
     else if (num_vertices)

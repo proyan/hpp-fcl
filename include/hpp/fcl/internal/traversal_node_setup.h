@@ -515,6 +515,9 @@ bool initialize(MeshCollisionTraversalNode<BV, 0>& node,
                 const BVHModel<BV>& model1, const Transform3f& tf1,
                 const BVHModel<BV>& model2, const Transform3f& tf2,
                 CollisionResult& result) {
+  std::cerr<<"XXXXXXXXXXXXXXXXXXXXXXXXXX"<<std::endl;
+  std::cerr<<model1.getModelType()<<" vs "<<BVH_MODEL_TRIANGLES<<std::endl;
+  std::cerr<<"YYYYYYYYYYYYYYYYYYYYYYYYYY"<<std::endl;
   if (model1.getModelType() != BVH_MODEL_TRIANGLES)
     HPP_FCL_THROW_PRETTY(
         "model1 should be of type BVHModelType::BVH_MODEL_TRIANGLES.",
